@@ -17,7 +17,6 @@
 package com.example.android.unscramble.ui.game
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,11 +48,6 @@ class GameFragment : Fragment() {
     ): View {
         // Inflate the layout XML file and return a binding object instance
         binding = DataBindingUtil.inflate(inflater, R.layout.game_fragment, container, false)
-        Log.d(CLASS_NAME, "$CLASS_NAME created/re-created!")
-        Log.d(
-            CLASS_NAME, "Word: ${viewModel.currentScrambledWord} " +
-                    "Score: ${viewModel.score} WordCount: ${viewModel.currentWordCount}"
-        )
         return binding.root
     }
 
@@ -142,9 +136,5 @@ class GameFragment : Fragment() {
             .setNegativeButton(getString(R.string.exit)) { _, _ -> exitGame() }
             .setPositiveButton(getString(R.string.play_again)) { _, _ -> restartGame() }
             .show()
-    }
-
-    companion object {
-        val CLASS_NAME: String = GameFragment::class.java.simpleName
     }
 }

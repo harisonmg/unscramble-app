@@ -3,7 +3,6 @@ package com.example.android.unscramble.ui.game
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.TtsSpan
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -39,7 +38,6 @@ class GameViewModel : ViewModel() {
     }
 
     init {
-        Log.d(GameFragment.CLASS_NAME, "$CLASS_NAME created!")
         getNextWord()
     }
 
@@ -103,9 +101,5 @@ class GameViewModel : ViewModel() {
         _currentWordCount.value = 0
         wordsList.clear()
         getNextWord()
-    }
-
-    companion object {
-        val CLASS_NAME: String = GameViewModel::class.java.simpleName
     }
 }
