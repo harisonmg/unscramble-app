@@ -57,11 +57,6 @@ class GameFragment : Fragment() {
         return binding.root
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        Log.d(CLASS_NAME, "$CLASS_NAME destroyed!")
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

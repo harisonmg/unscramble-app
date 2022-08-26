@@ -43,11 +43,6 @@ class GameViewModel : ViewModel() {
         getNextWord()
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        Log.d(GameFragment.CLASS_NAME, "$CLASS_NAME destroyed!")
-    }
-
     /**
      * Updates [currentWord] and [currentScrambledWord] with the next word.
      */
